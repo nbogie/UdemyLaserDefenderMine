@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 93f32c0cf12374add845ea09776543d2
+timeCreated: 1517626595
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: BatmanForeverAlternate
+  fontNames:
+  - BatmanForeverAlternate
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

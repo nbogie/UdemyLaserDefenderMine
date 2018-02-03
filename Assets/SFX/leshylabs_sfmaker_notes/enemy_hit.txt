@@ -1,0 +1,2 @@
+#for https://www.leshylabs.com/apps/sfMaker/
+w=Noise,W=8000,f=70.824,v=41.926,V=2.404,t=200.233,T=0.352,_=0.213,d=216.653,D=0.29,p=1.227,A=0.2,b=0.1,r=0.2,s=4,S=2.059,g=0.803,l=0.454,e=Sine,N=12,F=336.546,B=Fixed,E=9401
