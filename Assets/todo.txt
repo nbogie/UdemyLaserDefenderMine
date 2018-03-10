@@ -1,0 +1,23 @@
+﻿Power-up drops from dead aliens - 
+  from last in wave - make real waves
+% chance that an alien gets infuriated when hurt
+Tougher Aliens
+Different aliens
+Bosses
+Aliens will race you to power-ups
+Bullets fire on the beat
+Powerups add beat subdivisions 
+  (e.g. for faster firing).
+Make powerup scripts, supporting an interface.
+Health Bar
+A shop to spend collected money on weapons
+Natural environment phenomenon to beat enemy: 
+   black holes, storms, meteors, witch space...
+Homing Missiles
+
+Press 't' to toggle this ToDo display
+
+DONE: 
+Weapon power-ups: three-way shot
+Cheat to smart-bomb all enemies on screen
+Cheat to 'w'eaken player to near death

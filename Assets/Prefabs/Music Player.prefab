@@ -39,8 +39,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7c1fdc6382e394088b3ecad8cfd89a4f, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 5fa5f05399c6b498ca371e4bcc5316f8, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
@@ -85,7 +85,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -109,7 +109,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,6 +121,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de01848f3a22f4c029498cef005440ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundtracks:
+  - {fileID: 8300000, guid: 5fa5f05399c6b498ca371e4bcc5316f8, type: 3}
+  - {fileID: 8300000, guid: 7c1fdc6382e394088b3ecad8cfd89a4f, type: 3}
+  - {fileID: 8300000, guid: 5fa5f05399c6b498ca371e4bcc5316f8, type: 3}
+  - {fileID: 8300000, guid: 7c1fdc6382e394088b3ecad8cfd89a4f, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

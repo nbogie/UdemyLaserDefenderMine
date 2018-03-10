@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ScoreKeeper : MonoBehaviour
 {
 	public Text text;
-	private int score;
+	private static int score;
 
 	public void Score (int points)
 	{
@@ -26,10 +26,19 @@ public class ScoreKeeper : MonoBehaviour
 		ResetScore ();
 	}
 
-	public void ResetScore ()
-	{
-		score = 0;
-		UpdateText ();
-	}
+    public void ResetScoreAndUpdateText()
+    {
+        ResetScore();
+        UpdateText();
+    }
+
+    public static void ResetScore()
+    {
+        score = 0;
+    }
+    public static int GetScore()
+    {
+        return score;
+    }
 
 }
