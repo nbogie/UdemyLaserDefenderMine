@@ -4,6 +4,21 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
+    public enum WeaponType
+    {
+        Single, 
+        TwoWay,
+        ThreeWay,
+        FiveWay
+    }
+    public static WeaponType[] allWeaponTypes()
+    {
+        WeaponType[] ts = { WeaponType.Single, WeaponType.TwoWay, WeaponType.ThreeWay, WeaponType.FiveWay };
+        return ts;
+    }
+        
+
+
     float speed = 2;
 
     public Sprite[] powerUpSprites;
@@ -25,7 +40,7 @@ public class PowerUp : MonoBehaviour
 	{
         PlayerController player = other.GetComponent<PlayerController>();
         if (player){
-            player.PowerUp();
+            player.ReceivePowerUp();
             Destroy(gameObject);
         }
 	}

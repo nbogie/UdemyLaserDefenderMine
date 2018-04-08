@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
 {
 
     public KeyCode leftKey;
+    public PowerUp.WeaponType x;
+
     public KeyCode rightKey;
     public KeyCode upKey;
     public KeyCode downKey;
@@ -33,21 +35,8 @@ public class PlayerController : MonoBehaviour
     private ParticleSystem dmgParticles;
 
     private CameraShaker cameraShaker;
-    private WeaponType weaponType;
+    private PowerUp.WeaponType weaponType;
 
-    enum WeaponType
-    {
-        Single, 
-        TwoWay,
-        ThreeWay,
-        FiveWay
-    }
-    static WeaponType[] allWeaponTypes()
-    {
-        WeaponType[] ts = { WeaponType.Single, WeaponType.TwoWay, WeaponType.ThreeWay, WeaponType.FiveWay };
-        return ts;
-    }
-        
 
     void PlayDamageSound(Vector3 pos)
     {
@@ -64,7 +53,7 @@ public class PlayerController : MonoBehaviour
     }
     void Start()
     {
-        weaponType = WeaponType.Single;
+        weaponType = PowerUp.WeaponType.Single;
 
         dmgParticles = Instantiate(dmgParticlesPrefab) as ParticleSystem;
         cameraShaker = Camera.main.GetComponent<CameraShaker>();
@@ -134,12 +123,12 @@ public class PlayerController : MonoBehaviour
     {
         //TODO: figure out velocity from angle (or rotation from velocity)
         fireWeaponAtAngle(Vector3.forward, Quaternion.identity, Vector2.up * laserMoveSpeed);
-        if (weaponType == WeaponType.FiveWay || weaponType == WeaponType.ThreeWay)
+        if (weaponType == PowerUp.WeaponType.FiveWay || weaponType == PowerUp.WeaponType.ThreeWay)
         {
             fireWeaponAtAngle(Vector3.forward + Vector3.left * 0.15f, Quaternion.AngleAxis(-26.565f, Vector3.back), new Vector3(-1, 2, 0).normalized * laserMoveSpeed);
             fireWeaponAtAngle(Vector3.forward + Vector3.right * 0.15f, Quaternion.AngleAxis(26.565f, Vector3.back), new Vector3(1, 2, 0).normalized * laserMoveSpeed);
         }
-        if (weaponType == WeaponType.FiveWay){
+        if (weaponType == PowerUp.WeaponType.FiveWay){
             fireWeaponAtAngle(Vector3.forward + Vector3.left * 0.3f, Quaternion.AngleAxis(-45f, Vector3.back), new Vector3(-1, 1, 0).normalized * laserMoveSpeed);
             fireWeaponAtAngle(Vector3.forward + Vector3.right * 0.3f, Quaternion.AngleAxis(45f, Vector3.back), new Vector3(1, 1, 0).normalized * laserMoveSpeed);            
         }   
@@ -175,11 +164,11 @@ public class PlayerController : MonoBehaviour
             laserCooloffTime = minLaserCooloffTime;
         }
     }
-    private WeaponType RandomWeaponType(){
-        WeaponType[] ts = allWeaponTypes();
+    private PowerUp.WeaponType RandomWeaponType(){
+        PowerUp.WeaponType[] ts = PowerUp.allWeaponTypes();
         return ts[Random.Range(0, ts.Length)];
     }
-    public void PowerUp()
+    public void ReceivePowerUp()
     {
         Debug.Log("got power up!");
         weaponType = RandomWeaponType();

@@ -1,4 +1,5 @@
-﻿Power-up drops from dead aliens - 
+﻿Homing Missiles
+Power-up drops from dead aliens - 
   from last in wave - make real waves
 % chance that an alien gets infuriated when hurt
 Tougher Aliens
@@ -13,11 +14,10 @@ Health Bar
 A shop to spend collected money on weapons
 Natural environment phenomenon to beat enemy: 
    black holes, storms, meteors, witch space...
-Homing Missiles
 
 Press 't' to toggle this ToDo display
 
 DONE: 
-Weapon power-ups: three-way shot
+Weapon power-ups: 3-way shot, 5-way
 Cheat to smart-bomb all enemies on screen
 Cheat to 'w'eaken player to near death
